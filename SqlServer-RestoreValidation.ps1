@@ -42,7 +42,7 @@ foreach ($rs in $fetch_rs) {
         '
         $history_limit = Invoke-Sqlcmd -ServerInstance $dba_main -Query $q_history
 
-        #  begin 'execute_flag' iff statement for the inner most loop (e.g., if the flag is 0 no work to do)
+        #  begin 'execute_flag' if statement for the inner most loop (e.g., if the flag is 0 no work to do)
         if ($history_limit.execute_flag -eq '1') {
     
              #  create and populate table for storing restore validation logic
