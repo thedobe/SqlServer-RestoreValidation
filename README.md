@@ -1,7 +1,7 @@
 # SqlServer-RestoreValidation
 Crawls over a CMS and dynamically restores the most FULL backup for validity.
 
-All restores (non-system databases) are performed on the CMS server and their files relocated to a \\share. 
+All restores (non-system databases) are performed on the CMS server and their files relocated to a \\\share. 
 
 The history table works by either attempting a restore on a newly found backup set or a backup set which hasn't been restored in thirty days.
 
