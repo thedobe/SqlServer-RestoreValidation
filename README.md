@@ -1,5 +1,5 @@
 # SqlServer-RestoreValidation
-Crawls over a CMS and dynamically restores the most FULL backup for validity.
+Crawls over a CMS and dynamically restores the most recent FULL backup for validity.
 
 All restores (non-system databases) are performed on the CMS server with a prefix and their files are relocated to a \\\share. 
 
