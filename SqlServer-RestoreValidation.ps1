@@ -171,7 +171,6 @@ foreach ($rs in $fetch_rs) {
                     #[datetime]$today = Get-Date -Format 'dd/MM/yyyy HH:mm:ss'
                     $restore_start = Get-Date
 
-                    #Restore-SqlDatabase -ServerInstance $sqlserver.Name -Database $dbName_restore -BackupFile $b_device -RelocateFile @(for($c=1;$c -lt $i;$c++){Get-Variable "SMORF_$c" -ValueOnly}, $re_log) -ReplaceDatabase
                     Restore-SqlDatabase -ServerInstance $dba_main -Database $dbName_restore -BackupFile $b_device -ReplaceDatabase -RelocateFile @(for($c=1;$c -lt $i;$c++){Get-Variable "SMORF_$c" -ValueOnly}, $re_log) 
                     $restore_finish = Get-Date
                     $restore_minutes = (New-TimeSpan -Start $restore_start -End $restore_finish).Minutes
